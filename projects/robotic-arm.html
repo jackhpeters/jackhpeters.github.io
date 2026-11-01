@@ -150,14 +150,26 @@
           <div class="content-block">
             <h2>Video demonstration</h2>
 
-            <div class="media-placeholder">
-              <div>
-                <strong>Video placeholder</strong>
-                <small>
-                  Embed an unlisted YouTube video here when available.
-                </small>
-              </div>
-            </div>
+            <video
+              controls
+              playsinline
+              preload="metadata"
+              style="
+                display:block;
+                width:100%;
+                height:auto;
+                border-radius:12px;
+                background:#000;
+              "
+            >
+              <source
+                src="../videos/ARM_VIDEO.mp4"
+                type="video/mp4"
+              >
+
+              Your browser does not support HTML5 video.
+            </video>
+
           </div>
 
           <!-- TESTING & RESULTS -->
