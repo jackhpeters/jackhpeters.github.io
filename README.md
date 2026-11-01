@@ -1,4 +1,4 @@
-# Jack Peters — Engineering Portfolio
+# Jack Peters — Engineering Portfolio - jackhpeters.github.io
 
 A static GitHub Pages portfolio. Upload the **contents** of this folder to the root of `jackhpeters/jackhpeters.github.io`. Keep the `projects/` directory and `styles.css` in place.
 
