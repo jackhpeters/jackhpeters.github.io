@@ -22,3 +22,63 @@
 .project{display:block;color:inherit}.project:focus-visible{outline:3px solid #7baed9;outline-offset:4px}.project .view-project{display:inline-block;margin-top:17px;color:var(--blue);font-size:13px;font-weight:700}
 .page-hero{padding:76px 0 38px}.back{font-size:14px;color:var(--blue);font-weight:650}.page-hero h1{font-size:clamp(38px,5vw,62px);margin:20px 0 14px}.page-summary{font-size:18px;color:var(--muted);max-width:780px}.meta{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.detail-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:28px}.content-block{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;margin-bottom:22px}.content-block h2{font-size:25px;margin:0 0 14px}.content-block p{color:var(--muted);margin:0 0 14px}.content-block p:last-child{margin:0}.media-placeholder{min-height:290px;background:linear-gradient(135deg,#e8f0f6,#f5f8fa);border:1px dashed #aec5d7;border-radius:16px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:#56748c}.media-placeholder strong{display:block;font-size:18px;color:var(--ink)}.media-placeholder small{display:block;max-width:420px;margin-top:7px}.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.gallery .media-placeholder{min-height:185px}.project-media{display:block;width:100%;max-height:540px;object-fit:cover;border-radius:14px}.video-wrap{position:relative;aspect-ratio:16/9}.video-wrap iframe{width:100%;height:100%;border:0;border-radius:14px}.helper{font-size:12px;color:var(--muted);margin-top:10px}.detail-list{padding-left:18px;color:var(--muted)}.detail-list li{margin:8px 0}
 @media(max-width:780px){.detail-grid{grid-template-columns:1fr}.page-hero{padding:55px 0 25px}}@media(max-width:560px){.gallery{grid-template-columns:1fr}}
+
+/* EXPANDABLE PROJECT IMAGES */
+
+.expandable-image {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.expandable-image:hover {
+  transform: scale(1.02);
+}
+
+.expandable-image:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* FULL-SCREEN IMAGE VIEWER */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.92);
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-image {
+  display: block;
+  max-width: 95%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  z-index: 10000;
+  color: white;
+  font-size: 38px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
